@@ -22,10 +22,11 @@ endif()
 # Warnings and errors.
 
 # Be less pedantic in release builds for users.
-set(CMAKE_CXX_FLAGS_RELEASE "-Wno-error -Wall -Wextra -Wno-unknown-pragmas -Wno-fatal-errors ${CMAKE_CXX_FLAGS_RELEASE}")
+set(CMAKE_CXX_FLAGS_RELEASE "-Wno-error -Wall -Wextra -Wno-unknown-pragmas -Wno-fatal-errors  ${CMAKE_CXX_FLAGS_RELEASE}")
 
 # Be more pedantic in debug mode for developers.
-set(CMAKE_CXX_FLAGS_DEBUG "-Werror -Wall -Wextra -pedantic ${CMAKE_CXX_FLAGS_DEBUG}")
+# Disable shift negative value error to allow SNES SPC to build.
+set(CMAKE_CXX_FLAGS_DEBUG "-Werror -Wall -Wextra -pedantic -Wno-error=shift-negative-value ${CMAKE_CXX_FLAGS_DEBUG}")
 
 # Platform-specific flags.
 if(WIN32)
