@@ -36,7 +36,8 @@ enum class GameCommand {
   RIGHT,
   UP,
   LEFT,
-  DOWN
+  DOWN,
+  DIRECTION_LOCK
 };
 
 }

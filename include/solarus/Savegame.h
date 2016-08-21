@@ -54,6 +54,7 @@ class SOLARUS_API Savegame: public ExportableToLua {
     static const std::string KEY_KEYBOARD_UP;
     static const std::string KEY_KEYBOARD_LEFT;
     static const std::string KEY_KEYBOARD_DOWN;
+    static const std::string KEY_KEYBOARD_DIRECTION_LOCK;
     static const std::string KEY_JOYPAD_ACTION;
     static const std::string KEY_JOYPAD_ATTACK;
     static const std::string KEY_JOYPAD_ITEM_1;
@@ -63,6 +64,7 @@ class SOLARUS_API Savegame: public ExportableToLua {
     static const std::string KEY_JOYPAD_UP;
     static const std::string KEY_JOYPAD_LEFT;
     static const std::string KEY_JOYPAD_DOWN;
+    static const std::string KEY_JOYPAD_DIRECTION_LOCK;
     static const std::string KEY_CURRENT_LIFE;
     static const std::string KEY_CURRENT_MONEY;
     static const std::string KEY_CURRENT_MAGIC;

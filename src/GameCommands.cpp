@@ -39,7 +39,8 @@ const std::map<GameCommand, std::string> GameCommands::command_names = {
     { GameCommand::RIGHT, "right" },
     { GameCommand::UP, "up" },
     { GameCommand::LEFT, "left" },
-    { GameCommand::DOWN, "down" }
+    { GameCommand::DOWN, "down" },
+    { GameCommand::DIRECTION_LOCK, "dir_lock" }
 };
 
 const std::string GameCommands::direction_names[4] = {
@@ -628,7 +629,8 @@ const std::string& GameCommands::get_keyboard_binding_savegame_variable(
       { GameCommand::RIGHT, Savegame::KEY_KEYBOARD_RIGHT },
       { GameCommand::UP, Savegame::KEY_KEYBOARD_UP },
       { GameCommand::LEFT, Savegame::KEY_KEYBOARD_LEFT },
-      { GameCommand::DOWN, Savegame::KEY_KEYBOARD_DOWN }
+      { GameCommand::DOWN, Savegame::KEY_KEYBOARD_DOWN },
+      { GameCommand::DIRECTION_LOCK, Savegame::KEY_KEYBOARD_DIRECTION_LOCK }
   };
 
   return savegame_variables.find(command)->second;
@@ -654,8 +656,9 @@ const std::string& GameCommands::get_joypad_binding_savegame_variable(
       { GameCommand::RIGHT, Savegame::KEY_JOYPAD_RIGHT },
       { GameCommand::UP, Savegame::KEY_JOYPAD_UP },
       { GameCommand::LEFT, Savegame::KEY_JOYPAD_LEFT },
-      { GameCommand::DOWN, Savegame::KEY_JOYPAD_DOWN }
-  };
+      { GameCommand::DOWN, Savegame::KEY_JOYPAD_DOWN },
+      { GameCommand::DIRECTION_LOCK, Savegame::KEY_JOYPAD_DIRECTION_LOCK }
+};
 
   return savegame_variables.find(command)->second;
 }

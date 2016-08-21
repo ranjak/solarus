@@ -46,6 +46,8 @@ class Hero::FreeState: public Hero::PlayerMovementState {
     virtual void set_animation_stopped() override;
     virtual void set_animation_walking() override;
 
+    virtual bool is_direction_locked() const override;
+
   private:
 
     int pushing_direction4;         /**< direction where the hero is trying to

@@ -41,6 +41,7 @@ const std::string Savegame::KEY_KEYBOARD_RIGHT = "_keyboard_right";    /**< Keyb
 const std::string Savegame::KEY_KEYBOARD_UP = "_keyboard_up";          /**< Keyboard key mapped to the up command. */
 const std::string Savegame::KEY_KEYBOARD_LEFT = "_keyboard_left";      /**< Keyboard key mapped to the left command. */
 const std::string Savegame::KEY_KEYBOARD_DOWN = "_keyboard_down";      /**< Keyboard key mapped to the down command. */
+const std::string Savegame::KEY_KEYBOARD_DIRECTION_LOCK = "_keyboard_dir_lock";      /**< Keyboard key mapped to the direction lock command. */
 const std::string Savegame::KEY_JOYPAD_ACTION = "_joypad_action";      /**< Joypad string mapped to the action command. */
 const std::string Savegame::KEY_JOYPAD_ATTACK = "_joypad_attack";      /**< Joypad string mapped to the attack command. */
 const std::string Savegame::KEY_JOYPAD_ITEM_1 = "_joypad_item_1";      /**< Joypad string mapped to the item 1 command. */
@@ -50,6 +51,7 @@ const std::string Savegame::KEY_JOYPAD_RIGHT = "_joypad_right";        /**< Joyp
 const std::string Savegame::KEY_JOYPAD_UP = "_joypad_up_key";          /**< Joypad string mapped to the up command. */
 const std::string Savegame::KEY_JOYPAD_LEFT = "_joypad_left_key";      /**< Joypad string mapped to the left command. */
 const std::string Savegame::KEY_JOYPAD_DOWN = "_joypad_down_key";      /**< Joypad string mapped to the down command. */
+const std::string Savegame::KEY_JOYPAD_DIRECTION_LOCK = "_joypad_dir_lock";      /**< Joypad string mapped to the direction lock command. */
 const std::string Savegame::KEY_CURRENT_LIFE = "_current_life";        /**< Number of life points. */
 const std::string Savegame::KEY_CURRENT_MONEY = "_current_money";      /**< Amount of money. */
 const std::string Savegame::KEY_CURRENT_MAGIC = "_current_magic";      /**< Number of magic points. */
@@ -173,6 +175,7 @@ void Savegame::set_default_keyboard_controls() {
   set_string(KEY_KEYBOARD_UP, enum_to_name(InputEvent::KEY_UP));
   set_string(KEY_KEYBOARD_LEFT, enum_to_name(InputEvent::KEY_LEFT));
   set_string(KEY_KEYBOARD_DOWN, enum_to_name(InputEvent::KEY_DOWN));
+  set_string(KEY_KEYBOARD_DIRECTION_LOCK, enum_to_name(InputEvent::KEY_LEFT_SHIFT));
 }
 
 /**
